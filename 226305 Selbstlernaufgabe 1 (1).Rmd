@@ -1,0 +1,95 @@
+---
+title: "226305 Selbstlernaufgaben"
+subtitle: "Aufgabe 1"
+author: "Swaran Sandhu | sandhu@hdm-stuttgart.de"
+output: html_document
+---
+
+# Setup
+
+## Formalia
+
+Denken Sie bei den Abgaben bitte an folgendes:
+
+1.  Verwenden Sie ab RStudio 4.1 **Visual Markdown**, dann ist die
+    Bearbeitung des Dokuments deutlich einfacher.
+2.  Chunks **übersichtlich** halten, lieber mal eine Leerzeile zuviel
+    setzen.
+3.  **Überschriften** setzen mit #, ##, \### (diese werden automatisch
+    im Inhaltsverzeichnis übernommen), also keine umständliche Fettung
+4.  Erläuterung und Code-Chunks im Dokument trennen.
+5.  **Code-Chunks** eindeutig benennen, damit diese schneller gefunden
+    werden. Die Namen der Chunks müssen **eindeutig** sein und dürfen
+    sich nicht doppeln.
+6.  **Kommentierungen** im Code immer dann, wenn die Schritte
+    nachvollziehbar gemacht werden: also nicht in jeder Zeile, vor allem
+    wenn der Code quasi reproduziert wird.
+
+Achten Sie auf die Einstellungsmöglichkeiten der **Code-Chunks**: nicht
+immer ist es sinnvoll, sich alle Ergebnisse anzeigen zu lassen: dies
+lässt sich gut bei den Einstellungen der Chunks steuern, ebenso wie die
+Abbildungsgröße. Ich stelle diese als Default auf 3:4 ein. Bei den
+Visualisierungen empfehle ich mit set.seed=12 und asp=0 zu arbeiten,
+damit die Fläche entsprechend ausgenutzt wird.
+
+```{r setup}
+library(igraph)
+
+# für die Grafiken
+# set.seed=12 ermöglicht die Vergleichbarkeit der Grafiken
+```
+
+Studierende wurden innerhalb der Veranstaltung 226305a vom Dozierenden
+mit einem Online-Fragebogen im Sommersemester 2017 befragt. Der
+Datensatz wurde anschließend anonymisiert. Die Relationen Ratsuche und
+Zusammenarbeit sind erhalten geblieben, die Beziehungen Liebe sind
+fiktiv. Der Datensatz ist unter
+[Github](https://github.com/hdm-crpr/226305/tree/master/data/crpr2)
+verfügbar. Das
+[Codebuch](https://github.com/hdm-crpr/226305/blob/master/data/crpr2/codebuch.md)
+beschreibt die Variablen, Relationen und Gewichte des Netzwerks und ist
+ebenfalls auf Github hinterlegt.
+
+**Wichtig**: Sie können das Notebook einfach fortschreiben und sich auf
+bereits erstellte Teilnetzwerke beziehen. Das erleichtert Ihnen die
+Analyse.
+
+# Aufgabe 1 (Netzwerke erstellen)
+
+## Netzwerk erstellen
+
+Erstellen Sie
+
+a)  ein gerichtetes Netzwerk s_directed\
+b)  ein ungerichtetes Netzwerk s_undirected
+
+```{r 1-1 Gesamnetzwerk erstellen, echo=FALSE}
+
+library(igraph)
+
+# Einlesen der Edge- und Nodelist
+
+
+# Matrix erstellen
+
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt s
+
+
+# Gesamtnetzwerk gerichtet
+
+
+# Gesamtnetzwerk ungerichtet
+
+```
+
+```{r Einfache Visualisierung des erstellten Objekt, echo=FALSE, fig.height=4, fig.width=6}
+
+# Pro-Tipp: die Ausgabe jedes "chunks" lässt sich über das Rädchen direkt unter der Chunk-Beschreibung einstellen. Hier habe ich die Bildfläche auf 4 auf 6 Inches eingestellt, d.h. das Netzwerk wird automatisch auf eine Fläche von 4 auf 6 Inches geplottet. Für den Anfang empfehle ich immer bei Netzwerken bis 50 Knoten mit dem Kamada-Kawai Algorithmus zu arbeiten, weil hier die Knoten immer an die gleiche Position gesetzt werden und wir dadurch Abweichungen besser erkennen können.
+
+
+```
+
+Die Netzwerke sind identisch in der Anzahl der Knoten und Kanten. Das
+ungerichtete Netzwerk hat keine Information über die Richtung des
+Netzwerks.
